@@ -1,0 +1,10 @@
+# AI/BI Dashboard como Código (Databricks Asset Bundle)
+
+resources:
+  dashboards:
+    dashboard_portfolio:
+      display_name: Vértice Control Tower · Portfólio Executivo
+      file_path: ../resources/dashboard-portfolio.lvdash.json
+      warehouse_id: ${var.warehouse_id}
+      dataset_catalog: ${var.catalog}
+      dataset_schema: gold

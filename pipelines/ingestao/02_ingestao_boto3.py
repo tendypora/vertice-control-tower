@@ -1,12 +1,12 @@
 # Databricks notebook source
 # MAGIC %md
-# MAGIC # Ingestão de Object Storage S3 com boto3
+# MAGIC # Noite 2 · 2 de 2 · Ingestão do data lake com boto3 · gabarito
 
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC Um notebook novo, `02_ingestao_boto3`, serverless. Script de referência:
-# MAGIC [`02_ingestao_boto3.py`](02_ingestao_boto3.py)  O mesmo extrair-pousar-carregar da API, agora
+# MAGIC Um notebook novo, `02_ingestao_boto3`, serverless. Com lacunas para fazer junto:
+# MAGIC [`02_ingestao_boto3.py`](02_ingestao_boto3.py) · código pronto: [`02_ingestao_boto3_gabarito.py`](02_ingestao_boto3_gabarito.py). O mesmo extrair-pousar-carregar da API, agora
 # MAGIC para o data lake inteiro. As 4 caixinhas do topo recebem os valores da tabela de conexão.
 # MAGIC
 # MAGIC Ontem você baixou os arquivos e subiu no volume **na mão**. Numa empresa, os sistemas e as
@@ -46,6 +46,10 @@ for nome in VARIAVEIS:
         continue
     dbutils.widgets.text(nome, "")                 # senão, a caixinha (o job preenche pelos Parameters)
     os.environ[nome] = dbutils.widgets.get(nome)   # e o valor vira variável de ambiente
+
+if os.environ.get("AWS_ACCESS_KEY_ID") in ("", "SEM_CHAVE", None):
+    print("Modo sem chaves S3: mantendo as 9 tabelas da bronze já carregadas na Aula 1.")
+    dbutils.notebook.exit("OK - Bronze existente mantida")
 
 faltando = [nome for nome in VARIAVEIS if not os.environ[nome]]
 assert not faltando, f"preencha: {faltando}"      # para aqui se faltar alguma chave

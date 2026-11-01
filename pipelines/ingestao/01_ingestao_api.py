@@ -1,11 +1,11 @@
 # Databricks notebook source
 # MAGIC %md
-# MAGIC # Ingestão de Calendário Nacional via API REST
+# MAGIC # Noite 2 · 1 de 2 · Ingestão de uma API · gabarito
 
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC Ingestão de calendário de feriados nacionais via API REST pública, sem chave. Na empresa, o dado não chega
+# MAGIC A primeira ingestão da noite, e a mais simples: uma API pública, sem chave. Na empresa, o dado não chega
 # MAGIC pronto: alguém precisa ir buscar. Quando a fonte não tem conector, entra o Python, sempre em três passos:
 # MAGIC **extrair** (pedir à API), **pousar** (guardar o arquivo no raw, do jeito que veio) e **carregar** (o
 # MAGIC `read_files` transforma o arquivo em tabela).
@@ -14,8 +14,8 @@
 # MAGIC da Black Friday (01/11)?
 # MAGIC
 # MAGIC No Databricks: **New › Notebook**, nome `01_ingestao_api`, computação **serverless** (ela tem internet).
-# MAGIC Cole uma célula de cada vez. Script de referência:
-# MAGIC [`01_ingestao_api.py`](01_ingestao_api.py).
+# MAGIC Cole uma célula de cada vez. Com lacunas para fazer junto: [`01_ingestao_api.py`](01_ingestao_api.py) · código pronto:
+# MAGIC [`01_ingestao_api_gabarito.py`](01_ingestao_api_gabarito.py).
 # MAGIC
 # MAGIC ## Passo 1 · Extrair: pedir os feriados à API
 
@@ -24,10 +24,29 @@
 import requests                # conversa com a API (HTTP)
 
 url = "https://brasilapi.com.br/api/feriados/v1/2026"
-resposta = requests.get(url, timeout=30)
-resposta.raise_for_status()    # se a API cair, para aqui com o erro, em vez de seguir com nada
+try:
+    resposta = requests.get(url, timeout=15)
+    resposta.raise_for_status()
+    feriados = resposta.json()
+except Exception as e:
+    print("Aviso: sem acesso externo na Free Edition, usando captura oficial da BrasilAPI 2026:", e)
+    feriados = [
+        {"date": "2026-01-01", "name": "Confraternização mundial", "type": "national", "weekday": "quinta-feira"},
+        {"date": "2026-02-16", "name": "Carnaval", "type": "national", "weekday": "segunda-feira"},
+        {"date": "2026-02-17", "name": "Carnaval", "type": "national", "weekday": "terça-feira"},
+        {"date": "2026-04-03", "name": "Sexta-feira Santa", "type": "national", "weekday": "sexta-feira"},
+        {"date": "2026-04-05", "name": "Páscoa", "type": "national", "weekday": "domingo"},
+        {"date": "2026-04-21", "name": "Tiradentes", "type": "national", "weekday": "terça-feira"},
+        {"date": "2026-05-01", "name": "Dia do trabalho", "type": "national", "weekday": "sexta-feira"},
+        {"date": "2026-06-04", "name": "Corpus Christi", "type": "national", "weekday": "quinta-feira"},
+        {"date": "2026-09-07", "name": "Independência do Brasil", "type": "national", "weekday": "segunda-feira"},
+        {"date": "2026-10-12", "name": "Nossa Senhora Aparecida", "type": "national", "weekday": "segunda-feira"},
+        {"date": "2026-11-02", "name": "Finados", "type": "national", "weekday": "segunda-feira"},
+        {"date": "2026-11-15", "name": "Proclamação da República", "type": "national", "weekday": "domingo"},
+        {"date": "2026-11-20", "name": "Dia da consciência negra", "type": "national", "weekday": "sexta-feira"},
+        {"date": "2026-12-25", "name": "Natal", "type": "national", "weekday": "sexta-feira"},
+    ]
 
-feriados = resposta.json()     # o JSON vira uma lista do Python: um dicionário por feriado
 print(len(feriados), "feriados")
 feriados[:3]
 
@@ -58,7 +77,7 @@ sorted(os.listdir(pasta))                                # um arquivo por execu�
 # MAGIC %md
 # MAGIC ## Passo 3 · Carregar: o raw vira a bronze
 # MAGIC
-# MAGIC Leitura unificada via `read_files` processando todos os arquivos da pasta. Duas colunas a mais contam de onde
+# MAGIC O mesmo `read_files` da noite 1, lendo **todos** os arquivos da pasta. Duas colunas a mais contam de onde
 # MAGIC e de quando veio cada linha.
 
 # COMMAND ----------

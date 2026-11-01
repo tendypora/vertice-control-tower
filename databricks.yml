@@ -8,13 +8,19 @@ bundle:
 include:
   - resources/*.yml
 
+sync:
+  exclude:
+    - app/**
+    - relatorios_automatizados/**
+    - docs/**
+
 variables:
   catalog:
     description: Catálogo principal do Unity Catalog (Bronze, Silver, Gold e ML)
     default: lakehouse_vertice
   warehouse_id:
     description: SQL Warehouse serverless responsável pelas tarefas SQL e dashboards
-    default: 666be37e3fededf2
+    default: bf5b66011616730e
 
   s3_endpoint:
     description: Endpoint compatível com S3 do Object Storage corporativo

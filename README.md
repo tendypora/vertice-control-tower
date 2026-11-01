@@ -185,6 +185,13 @@ databricks bundle deploy --profile vertice
 databricks bundle run vertice_farol --profile vertice
 ```
 
+### Passo 4: Automação Local em Python (Relatórios Executivos `.xlsx` e `.pdf`)
+Para rodar localmente o pipeline analítico automatizado em Python que unifica as 3 ferramentas, calcula `SPI`, `CPI`, `EAC` e projetos "Melancia", e exporta relatórios prontos para a diretoria em `relatorios_automatizados/`:
+
+```bash
+python scripts/automacao_relatorio_executivo.py
+```
+
 ---
 
 ## 🛠️ Stack Tecnológica

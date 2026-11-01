@@ -1,0 +1,71 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [5 0 R] /Count 1 >>
+endobj
+4 0 obj
+<< /Length 2881 >>
+stream
+BT /F2 15 Tf 56 786.0 Td (Relatorio Executivo Automatizado - Governanca de Portfolio e Custos) Tj ET
+BT /F2 11.5 Tf 56 765.3 Td (Data-base: 16/10/2026 | Gerado automaticamente via Python Analytics) Tj ET
+BT /F2 11.5 Tf 56 749.4 Td (Pipeline) Tj ET
+BT /F1 10 Tf 56 733.6 Td () Tj ET
+BT /F2 11.5 Tf 56 719.8 Td (1. RESUMO EXECUTIVO DA CARTEIRA ATIVA) Tj ET
+BT /F1 10 Tf 56 703.9 Td (Total de projetos em andamento analisados: 41 projetos \(unificados de Excel, ClickUp e MS) Tj ET
+BT /F1 10 Tf 56 690.1 Td (Project\).) Tj ET
+BT /F1 10 Tf 56 676.3 Td (Projetos em estado CRITICO \(SPI ou CPI < 0,80\): 7 projetos.) Tj ET
+BT /F1 10 Tf 56 662.5 Td (Projetos em estado de ATENCAO \(indice entre 0,80 e 0,90\): 10 projetos.) Tj ET
+BT /F1 10 Tf 56 648.7 Td (Estouro orcamentario total projetado \(EAC - Orcamento\): R$ 6.47 milhoes.) Tj ET
+BT /F1 10 Tf 56 634.9 Td (Projetos 'Melancia' \(Farol Verde reportado com SPI < 0,90\): 4 \(PRJ-012, PRJ-028, PRJ-034,) Tj ET
+BT /F1 10 Tf 56 621.1 Td (PRJ-042\).) Tj ET
+BT /F1 10 Tf 56 607.3 Td () Tj ET
+BT /F2 11.5 Tf 56 593.5 Td (2. TOP 10 PROJETOS MAIS CRITICOS PARA ACAO IMEDIATA) Tj ET
+BT /F1 10 Tf 56 577.6 Td (PRJ-016 \(Operadora Bem Cuidar\) | SPI: 0.63 | CPI: 0.92 | Farol: VERMELHO | CRÕTICO |) Tj ET
+BT /F1 10 Tf 56 563.8 Td (Estouro: R$ 0.26 mi) Tj ET
+BT /F1 10 Tf 56 550.0 Td (PRJ-030 \(Seguradora Porto Firme\) | SPI: 0.69 | CPI: 0.90 | Farol: VERMELHO | CRÕTICO |) Tj ET
+BT /F1 10 Tf 56 536.2 Td (Estouro: R$ 0.36 mi) Tj ET
+BT /F1 10 Tf 56 522.4 Td (PRJ-039 \(Banco Meridiano\) | SPI: 0.75 | CPI: 0.95 | Farol: VERMELHO | CRÕTICO | Estouro: R$) Tj ET
+BT /F1 10 Tf 56 508.6 Td (0.13 mi) Tj ET
+BT /F1 10 Tf 56 494.8 Td (PRJ-009 \(Rede DiagnÛstica Vida\) | SPI: 0.94 | CPI: 0.77 | Farol: VERDE | CRÕTICO | Estouro:) Tj ET
+BT /F1 10 Tf 56 481.0 Td (R$ 0.52 mi) Tj ET
+BT /F1 10 Tf 56 467.2 Td (PRJ-011 \(Supermercados Bom PreÁo\) | SPI: 0.77 | CPI: 0.92 | Farol: AMARELO | CRÕTICO |) Tj ET
+BT /F1 10 Tf 56 453.4 Td (Estouro: R$ 0.31 mi) Tj ET
+BT /F1 10 Tf 56 439.6 Td (PRJ-027 \(Corretora Valor Real\) | SPI: 0.95 | CPI: 0.79 | Farol: VERDE | CRÕTICO | Estouro:) Tj ET
+BT /F1 10 Tf 56 425.8 Td (R$ 0.50 mi) Tj ET
+BT /F1 10 Tf 56 412.0 Td (PRJ-054 \(Seguradora Porto Firme\) | SPI: 0.80 | CPI: 0.93 | Farol: AMARELO | CRÕTICO |) Tj ET
+BT /F1 10 Tf 56 398.2 Td (Estouro: R$ 0.41 mi) Tj ET
+BT /F1 10 Tf 56 384.4 Td (PRJ-005 \(Rede DiagnÛstica Vida\) | SPI: 1.02 | CPI: 0.81 | Farol: VERDE | ATEN«√O | Estouro:) Tj ET
+BT /F1 10 Tf 56 370.6 Td (R$ 0.52 mi) Tj ET
+BT /F1 10 Tf 56 356.8 Td (PRJ-060 \(Hospital Santa Clara\) | SPI: 0.84 | CPI: 0.96 | Farol: AMARELO | ATEN«√O | Estouro:) Tj ET
+BT /F1 10 Tf 56 343.0 Td (R$ 0.09 mi) Tj ET
+BT /F1 10 Tf 56 329.2 Td (PRJ-001 \(Fintech Pagar F·cil\) | SPI: 0.84 | CPI: 0.98 | Farol: AMARELO | ATEN«√O | Estouro:) Tj ET
+BT /F1 10 Tf 56 315.4 Td (R$ 0.16 mi) Tj ET
+BT /F1 8 Tf 499 30 Td (p·g. 1/1) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 3 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Type /Catalog /Pages 3 0 R >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000112 00000 n 
+0000000214 00000 n 
+0000000271 00000 n 
+0000003204 00000 n 
+0000003340 00000 n 
+trailer
+<< /Size 7 /Root 6 0 R >>
+startxref
+3389
+%%EOF
